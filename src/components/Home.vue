@@ -87,7 +87,7 @@ export default {
   name: "home",
   data() {
     return {
-      msg: "home"
+      msg: "首页"
     };
   },
   methods: {
