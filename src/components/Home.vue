@@ -1,109 +1,47 @@
 <template>
-  <div class="viewbox">
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1><h1>{{ msg }}</h1><h1>{{ msg }}</h1>
+  <div class="viewbox" id="asd" v-bind:style="{height:css.height+'px'}">
+    <div class="part_1">
+    <div class="tool">
+      <i class="el-icon-setting"></i>
+      <i class="el-icon-headset"></i>
+      <i class="el-icon-chat-dot-square"></i>
+    </div>
+    <div class="myinfo">
+      <div class="pic">
+        <i class="el-icon-s-custom"></i>
+      </div>
+      <div class="phonenum"></div>
+    </div>
+    </div>
+    <div class="part_2">
 
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    v
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1><h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    v
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1><h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    <h1>{{ msg }}</h1>
-    
+    </div>
   </div>
 </template>
 
 <script>
+import {Scroll} from '../tool/Scroll.js'
+import {winHeight} from '../tool/Screen.js'
 export default {
   name: "home",
   data() {
     return {
-      msg: "首页"
+      msg: "首页",
+      css:{
+        height:0
+      }
     };
   },
   methods: {
     a: function(e) {
       if (!event) event = window.event;
-            console.log("scrollTop:"+this.scrollTop);//当前div的滚动条高度
-            console.log("event.wheelDelta:"+event.wheelDelta);//每次滚动时变化的高度
-            console.log("event.detail:"+event.detail);//同上，是兼容写法，滚动时变化的高度，和上一行的数据的值是不一样的
-            this.scrollTop = this.scrollTop - (event.wheelDelta ? event.wheelDelta : -event.detail * 10);//直接设置滚动条高度
-            console.log("after_this.scrollTop:"+this.scrollTop);
-            return false;//取消滚动条的默认行为，就是不让他执行默认的滚动
+      var getScroll = Scroll.ScollPostion()
+            console.log(getScroll.t);
     }
   },
   mounted() {
-    //监听scroll事件
-    window.addEventListener("mousewheel", this.a,false);
+        // this.css.height = winHeight-45;
+
   }
 };
 </script>
@@ -113,6 +51,24 @@ export default {
 .viewbox {
   /* height: 2000px;*/
   overflow: auto; 
-  background-color: yellow;
+}
+.part_1{
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background-color: red;
+  padding-bottom: 25%;
+}
+.tool{
+  text-align: right;
+  padding: 20px 20px 0px 0px;
+}
+.tool > i{
+  margin-right:10px;
+font-size: 2rem;
+}
+.myinfo{
+}
+.myinfo>div{
+  display: inline-block;
 }
 </style>

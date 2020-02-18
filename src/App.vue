@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <div class="foot">
+    <!-- <div class="foot" @touchmove.prevent>
       <ul>
         <li>
           <router-link to="Home">
@@ -24,7 +24,7 @@
           </router-link>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -43,6 +43,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow: hidden;
+  height: 100%;
 }
 
 .foot{
