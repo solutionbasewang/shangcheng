@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <!-- <div class="foot" @touchmove.prevent>
+    <div class="foot" @touchmove.prevent>
       <ul>
         <li>
           <router-link to="Home">
@@ -24,7 +24,7 @@
           </router-link>
         </li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </template>
 

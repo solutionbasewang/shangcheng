@@ -12,7 +12,11 @@
       </div>
       <div class="phonenum"></div>
     </div>
+    <div class="part_foot">
+
     </div>
+    </div>
+    
     <div class="part_2">
 
     </div>
@@ -40,7 +44,7 @@ export default {
     }
   },
   mounted() {
-        // this.css.height = winHeight-45;
+        this.css.height = winHeight-45;
 
   }
 };
@@ -51,12 +55,17 @@ export default {
 .viewbox {
   /* height: 2000px;*/
   overflow: auto; 
+  /* padding:0px 20px 0px 20px; */
 }
 .part_1{
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-  background-color: red;
-  padding-bottom: 25%;
+  /* background-color: cornflowerblue; */
+  background: radial-gradient(#3965fc,#2948ff);
+  
+}
+.part_foot{
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  height: 15px;
 }
 .tool{
   text-align: right;
@@ -67,8 +76,14 @@ export default {
 font-size: 2rem;
 }
 .myinfo{
+  text-align: left;
 }
 .myinfo>div{
   display: inline-block;
+}
+.pic{
+}
+.pic>i{
+  font-size: 3rem;
 }
 </style>

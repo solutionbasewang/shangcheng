@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div class="container">
+      <div class="d1"></div>
+      <div class="d2"></div>
+    </div>
   </div>
 </template>
 
@@ -17,6 +21,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello{
+  /* position: absolute; */
+}
+.container > div{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.container{
+  position: relative;
+}
+.d1{
+  background-color: red;
+}
+.d2{
+  background-color: yellow;
+}
 h1, h2 {
   font-weight: normal;
 }
