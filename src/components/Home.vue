@@ -10,7 +10,14 @@
       <div class="pic">
         <i class="el-icon-s-custom"></i>
       </div>
-      <div class="phonenum"></div>
+      <div class="phonenum">
+        <div>13792121059</div>
+        <div><label for="">山东泰安</label></div>
+      </div>
+    </div>
+    <div class="zili">
+      <div>网龄:<span>7个月></span></div>
+      <div>信用分:<span>582分></span></div>
     </div>
     <div class="part_foot">
 
@@ -52,6 +59,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+body{
+font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+background: #fff; 
+   }
 .viewbox {
   /* height: 2000px;*/
   overflow: auto; 
@@ -59,8 +70,8 @@ export default {
 }
 .part_1{
   /* background-color: cornflowerblue; */
-  background: radial-gradient(#3965fc,#2948ff);
-  
+  background-color: #0099CC;
+  color: #fff;
 }
 .part_foot{
   border-bottom-left-radius: 100%;
@@ -69,7 +80,7 @@ export default {
 }
 .tool{
   text-align: right;
-  padding: 20px 20px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 .tool > i{
   margin-right:10px;
@@ -77,6 +88,7 @@ font-size: 2rem;
 }
 .myinfo{
   text-align: left;
+  padding: 5px 0px 5px 20px;
 }
 .myinfo>div{
   display: inline-block;
@@ -84,6 +96,25 @@ font-size: 2rem;
 .pic{
 }
 .pic>i{
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+.zili{
+  text-align: left;
+  padding-left: 20px;
+  font-size: 1rem;
+}
+.zili>div{
+  display: inline-block;
+  /* width: 30%; */
+  min-width: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  border: 1px #CCCCCC solid;
+  font-size: .8rem;
+}
+.phonenum{
+  font-size: .8rem;
+  font-weight: bolder;
 }
 </style>
